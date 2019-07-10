@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<!--viewport 是用户网页的可视区域(视区)   width=375   手机端的宽度    user-scalable=no 用户不能进行缩放-->
+		<meta name="viewport" content="width=375,user-scalable=no" />
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header">
+			<div class="logo">TodoList</div>
+			<div class="input">
+				<input type="text" name="write" id="write" placeholder="请输入待办事项" value="" />
+			</div>
+		</div>
+		<!--下面整个的div-->
+		<div class="main">
+			<div class="list todo">
+				<h1>
+					<span class="title">正在进行</span>
+					<span class="num">1</span>
+				</h1>
+				
+				<div class="clist">
+					<div class="item">
+						<span class="checkbox">
+							<input type="checkbox" name="check"  value="" />
+						</span>
+						
+						<span class="content">
+							显示待办事项
+						</span>
+						<span class="delete"></span>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="list done">
+				<h1>
+					<span class="title">已经完成</span>
+					<span class="num">0</span>
+				</h1>
+				
+				<div class="clist"></div>
+			</div>
+		</div>
+		
+		<script src="js/js.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

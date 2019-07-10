@@ -1,0 +1,115 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background: #EFEFEF;
+}
+.header{
+	width: 375px;
+	height: 50px;
+	background: rgb(47,47,47,0.98);
+	display: flex;
+}
+.header .logo{
+	font-weight: bold;
+	color: pink;
+	width: 100px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 20px;
+}
+.header .input{
+	color: #fff;
+	width: 275px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header .input input{
+	border: none;
+	outline: none;
+	width: 250px;
+	height: 30px;
+	border-radius: 5px;
+	padding: 0 10px;
+}
+.main{
+	width: 375px;
+}
+.list>h1{
+	margin: 20px;
+	font-size: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+.todo>h1 .num{
+	width:auto;
+	padding: 0 10px;
+	height: 25px;
+	border-radius: 20px;
+	background: red;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	line-height: 25px;
+	
+}
+.done>h1 .num{
+	width:auto;
+	padding: 0 10px;
+	height: 25px;
+	border-radius: 20px;
+	background: green;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	line-height: 25px;
+	
+}
+.item{
+	margin: 5px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #fff;
+	border-radius: 5px;
+	padding: 5px 15px;
+	position: relative;
+}
+/*":before" 伪元素可以在元素的内容前面插入新内容。*/
+.item:before{
+	content: "";
+	width: 8px;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: blueviolet;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.item .checkbox{
+	display: flex;
+	align-items: center;
+}
+.item .checkbox input{
+	width: 22px;
+	height: 22px;
+	outline: none;
+	
+}
+.item .content{
+	width: 260px;
+	padding: 0 10px;
+	line-height: 22px;
+}
+.item .delete{
+	width:22px;
+	height: 22px;
+	background-image: url(../img/delete.png);
+	background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
