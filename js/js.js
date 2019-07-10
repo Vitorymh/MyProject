@@ -10,7 +10,7 @@ var main = document.querySelector(".main")
 //全局数组，每次都是通过它进行添加和删除
 //判断本地存储里是否存在这个数组对象，存在就把这个对象里的数据传进来，否则赋值为空
 //										将json格式的字符串转换为数组对象
-var dataList = localStorage.dataList?JSON.parse(localStorage.dataList):[]
+var dataList = localStorage.dataList?JSON.parse(localStorage.dataList):[];
 renderList();
 
 inputDom.onkeypress = function(e){
@@ -50,19 +50,19 @@ function renderList(){
 				<span class="content">
 					${item.content}
 				</span>
-				<span class="delete" data-indet=${index}></span>
+				<span class="delete" data-index=${index}></span>
 			`;
 			todoList.appendChild(newdiv);
 		}else{
 			doneNum++;
 			newdiv.innerHTML = `
 				<span class="checkbox">
-					<input type="checkbox" name="check" checked="checked"  value="" data-indet=${index}/>
+					<input type="checkbox" name="check" checked="checked"  value=""/>
 				</span>			
 				<span class="content">
 					${item.content}
 				</span>
-				<span class="delete" data-indet=${index}></span>
+				<span class="delete" data-index=${index}></span>
 			`;
 			doneList.appendChild(newdiv);
 		}
@@ -84,6 +84,7 @@ todoList.onchange = function(e){
 main.addEventListener("click",function(e){
 	//如果点击的目标类名为delete
 	if(e.target.className=="delete"){
+		console.log(e)
 		var index = e.target.dataset.index;
 		dataList.splice(index,1)
 		renderList()
